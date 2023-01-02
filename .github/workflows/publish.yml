@@ -17,6 +17,9 @@ jobs:
           
       - name: Setup Node
         uses: actions/setup-node@v2
+      
+      - name: Build Action
+        run: npm run build
 
       - uses: JasonEtco/build-and-tag-action@v2
         env:
