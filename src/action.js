@@ -4,7 +4,7 @@ import validate from "./validate.js";
 
 export default async function action() {
     try {
-        core.info(JSON.stringify(github.context));
+        core.info(`CONTEXT: ${JSON.stringify(github.context)}`);
 
         //const ref = github.context.ref;
         //const prefix = core.getInput('prefix');
