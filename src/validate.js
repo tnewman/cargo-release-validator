@@ -1,3 +1,4 @@
+import {info} from "@actions/core";
 import validateCargo from "./validateCargo.js";
 import validateRef from "./validateRef.js";
 
@@ -8,7 +9,13 @@ import validateRef from "./validateRef.js";
  * @param {string?} prefix An optional prefix that tags must start with.
  * @throws An error with a message describing the failed validation rule.
  */
-export default function validate() {
-    validateCargo();
-    validateRef(ref, prefix);
+export default function validate(ref, prefix) {
+    const [_, type, name] = ref.split("/", 3);
+
+    info(`Validating ${type} ${name}`);
+
+    validateCargo(type, name, prefix);
+    validateRef(type, name, prefix);
+
+    info(`Validated ${type} ${name}`);
 }

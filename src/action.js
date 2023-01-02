@@ -1,13 +1,14 @@
-import core from "@actions/core";
-import github from "@actions/github";
+import {getInput, setFailed} from "@actions/core";
+import {context} from "@actions/github";
 import validate from "./validate.js";
 
 export default async function action() {
     try {
-        const ref = github.context.ref;
-        const prefix = core.getInput('prefix');
+        const ref = context.ref;
+        const prefix = getInput('prefix');
+
         validate(ref, prefix);
     } catch (error) {
-        core.setFailed(error.message);
+        setFailed(error.message);
     }
 }

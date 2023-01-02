@@ -1,13 +1,12 @@
 /**
  * Validates a Git ref.
  * 
- * @param {string} ref The Git ref to validate.
+ * @param {string} type The type of ref (branch/tag).
+ * @param {string} name The ref name to validate (tag name/branch name).
  * @param {string?} prefix An optional prefix that tags must start with.
  * @throws An error with a message describing the failed validation rule.
  */
-export default function validateRef(ref, prefix) {
-    const [_, type, name] = ref.split("/", 3);
-
+export default function validateRef(type, name, prefix) {
     if (type !== "tags") {
         return;
     }
