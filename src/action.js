@@ -6,9 +6,9 @@ export default async function action() {
     try {
         const ref = context.ref;
         const prefix = getInput('prefix');
-        cosnt cargoManifest = getInput('cargoManifest');
+        const cargoManifest = getInput('cargoManifest');
 
-        validate(ref, prefix);
+        validate(cargoManifest, ref, prefix);
     } catch (error) {
         setFailed(error.message);
     }
