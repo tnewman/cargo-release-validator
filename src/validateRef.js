@@ -1,3 +1,5 @@
+import semver from "semver";
+
 /**
  * Validates a Git ref.
  * 
@@ -19,11 +21,15 @@ function validateTag(name, prefix) {
 
     if (prefix) {
         if (!name.startsWith(prefix)) {
-            throw `The tag name ${tag} does not start with the required prefix ${prefix}!`
+            throw `The tag name ${name} does not start with the required prefix ${prefix}!`;
         }
 
         normalizedName = name.slice(prefix.length);
     } else {
         normalizedName = name;
+    }
+
+    if(!semver.valid(normalizedName)) {
+        throw `The tag name ${name} does not include a valid semantic version!`;
     }
 }
