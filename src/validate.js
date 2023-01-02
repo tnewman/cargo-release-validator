@@ -12,10 +12,10 @@ import validateRef from "./validateRef.js";
 export default function validate(ref, prefix) {
     const [_, type, name] = ref.split("/", 3);
 
-    info(`Validating ${type} ${name}`);
+    info(`Validating Ref Type: ${type}, Ref Name: ${name}, Prefix ${prefix}`);
 
     validateCargo(type, name, prefix);
     validateRef(type, name, prefix);
 
-    info(`Validated ${type} ${name}`);
+    info(`Validation succeeded`);
 }
