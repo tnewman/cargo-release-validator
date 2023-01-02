@@ -1,6 +1,6 @@
 import {info} from "@actions/core";
-import validateCargo from "./validateCargo.js";
-import validateRef from "./validateRef.js";
+import validateCargo from "./validate-cargo.js";
+import validateRef from "./validate-ref.js";
 
 /**
  * Applies all validation rules.

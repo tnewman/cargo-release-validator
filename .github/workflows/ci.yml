@@ -25,6 +25,9 @@ jobs:
       - name: Build Action
         run: npm run build
       
+      - name: Test Action
+        run: npm run test
+
       - name: Run Action
         uses: ./
         with:
