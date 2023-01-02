@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "GitHub Action that makes sure a Rust project's Cargo File contains a valid semantic version that makes sense.",
   "main": "dist/index.js",
-  "type": "module",
   "scripts": {
     "build": "webpack",
     "test": "jest"
