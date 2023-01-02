@@ -1,0 +1,11 @@
+name: 'Cargo Release Validator'
+description: 'Makes sure a Rust project's Cargo File contains a valid semantic version that makes sense.'
+inputs:
+  prefix:
+    description: 'An optional prefix that tags must start with.'
+    required: false
+    default: ''
+
+runs:
+  using: 'node16'
+  main: 'index.js'
