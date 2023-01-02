@@ -1,5 +1,5 @@
-import validateCargo from "./validateCargo";
-import validateRef from "./validateRef";
+import validateCargo from "./validateCargo.js";
+import validateRef from "./validateRef.js";
 
 /**
  * Applies all validation rules.

@@ -2,10 +2,10 @@
   "name": "cargo-release-validator",
   "version": "0.1.0",
   "description": "GitHub Action that makes sure a Rust project's Cargo File contains a valid semantic version that makes sense.",
-  "main": "dist/index.mjs",
+  "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "build": "ncc build src/index.mjs",
-    "start": "ncc run src/index.mjs",
+    "build": "webpack",
     "test": "jest"
   },
   "repository": {
@@ -23,7 +23,8 @@
     "@actions/github": "^5.1.1"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.36.0",
-    "jest": "^29.3.1"
+    "jest": "^29.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   }
 }
