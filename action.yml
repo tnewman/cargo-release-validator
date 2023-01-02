@@ -6,6 +6,10 @@ branding:
   color: red
 
 inputs:
+  cargoManifest:
+    description: The Cargo Manifest File to validate.
+    required: false
+    default: Cargo.toml
   prefix:
     description: An optional prefix that tags must start with.
     required: false
