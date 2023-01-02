@@ -5,7 +5,7 @@ import validate from "./validate.js";
 
 export default async function action() {
     try {
-        const ref = context.payload.ref;
+        const ref = context.ref;
         const prefix = getInput('prefix');
         validate(ref, prefix);
     } catch (error) {
