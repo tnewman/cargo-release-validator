@@ -1,5 +1,10 @@
 name: cargo-release-validator
 description: Makes sure a Rust project's Cargo File contains a valid semantic version that makes sense.
+
+branding:
+  icon: check-circle
+  color: red
+
 inputs:
   prefix:
     description: An optional prefix that tags must start with.
